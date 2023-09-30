@@ -1,8 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300&display=swap');
 /* font-family: 'Source Sans 3', sans-serif; */
 
+.container{
+    border: 10px;
+    border-color: black;
+}
+
+body{
+    max-width: 1200px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #ffc46b;
+}
+
+
+
+
+
+
+
+
+
+/* 
 :root{
-    /*Variáveis CSS*/
+~~    Variáveis CSS
     --main-radius:5px; 
     --main-padding:5px;
 }
@@ -16,7 +38,7 @@ body{
 }
 
 .container{
-    /* Edita a div principal da página usando grid */
+~~    Edita a div principal da página usando grid
     display: grid;
     height: 100vh;
     grid-template-columns: 1fr 1fr;
@@ -27,7 +49,7 @@ body{
     "aside main"
     "footer footer"
     ;
-    /* Já seto algumas formatações que vão servir para pagina toda, se precisar ser diferente em algum lugar eu altero no específico */
+~~    Já seto algumas formatações que vão servir para pagina toda, se precisar ser diferente em algum lugar eu altero no específico
     grid-gap: 0.2rem;
     font-family: 'Source Sans 3', sans-serif;
     font: 1em;
@@ -36,13 +58,13 @@ body{
 }
 
 header{
-    /* Usando grid ao invés de flex, pois no flex a posição do nav não fica aonde eu quero de jeito nenhum */
+~~    Usando grid ao invés de flex, pois no flex a posição do nav não fica aonde eu quero de jeito nenhum
     display: grid;
     grid-template-columns: 1fr 3fr;
     grid-template-rows: 1fr;
     grid-template-areas: "logo nav";
     grid-gap: 0.2rem;
-    /* setup do grid do container */
+~~    setup do grid do container
     grid-area: header;
     border-radius: var(--main-radius);
     padding-top: var(--main-padding);
@@ -50,7 +72,7 @@ header{
 }
 
 .call{
-    /* setup do grid do container */
+~~    setup do grid do container
     background-color: #bb904f;
     grid-area: call;
     border-radius: var(--main-radius);
@@ -59,7 +81,7 @@ header{
 }
 
 main{
-    /* setup do grid do container */
+~~    setup do grid do container
     background-color: #a12626;
     grid-area: main;
     border-radius: var(--main-radius);
@@ -67,7 +89,7 @@ main{
     text-align: center;
 }
 main a{
-    /* Editando o "Jogar agora" para ficar parecendo um botão */
+~~    Editando o "Jogar agora" para ficar parecendo um botão
     color: rgb(255, 255, 255);
     background-color: #661717;
     padding: var(--main-padding);
@@ -77,7 +99,7 @@ main a{
 }    
 
 aside{
-    /* setup do grid do container */
+~~    setup do grid do container
     background-color: #a12626;
     grid-area: aside;
     border-radius: var(--main-radius);
@@ -87,7 +109,7 @@ aside{
 aside p{text-align: justify}
 
 footer{
-    /* setup do grid do container */
+~~    setup do grid do container
     grid-area: footer;
     border-radius: var(--main-radius);
     padding-top: var(--main-padding);
@@ -96,7 +118,7 @@ footer{
 
 
 .logo{
-    /* setup do grid do header */
+~~    setup do grid do header
     grid-area: logo;
     border-radius: var(--main-radius);
     margin: var(--main-padding);
@@ -104,7 +126,7 @@ footer{
 }
 
 nav{
-    /* setup do grid do header */
+~~    setup do grid do header
     grid-area: nav;
     border-radius: var(--main-radius);
     margin: var(--main-padding);
@@ -113,7 +135,7 @@ nav{
     padding-right: 1rem;
 }
 nav a{
-    /* Editando os links do nav para ficar parecendo um botão */
+~~    Editando os links do nav para ficar parecendo um botão
     color: rgb(0, 0, 0);
     padding: var(--main-padding);
     border-radius: var(--main-radius);
@@ -123,9 +145,9 @@ nav a{
 }    
 
 .itens{
-    /* Espaçando os elementos do nav */
+~~    Espaçando os elementos do nav
     display: flex;
     list-style: none;
     justify-content: space-between;
     padding: 0.5rem;
-}
+} */
