@@ -1,153 +1,42 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300&display=swap');
 /* font-family: 'Source Sans 3', sans-serif; */
 
-.container{
-    border: 10px;
-    border-color: black;
-}
-
 body{
-    max-width: 1200px;
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: #ffc46b;
-}
-
-
-
-
-
-
-
-
-
-/* 
-:root{
-~~    Variáveis CSS
-    --main-radius:5px; 
-    --main-padding:5px;
-}
-
-body{
-    max-width: 1200px;
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: #ffc46b;
-}
-
-.container{
-~~    Edita a div principal da página usando grid
-    display: grid;
-    height: 100vh;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 0.5fr 1fr 2fr 0.5fr;
-    grid-template-areas: 
-    "header header"
-    "call call"
-    "aside main"
-    "footer footer"
-    ;
-~~    Já seto algumas formatações que vão servir para pagina toda, se precisar ser diferente em algum lugar eu altero no específico
-    grid-gap: 0.2rem;
     font-family: 'Source Sans 3', sans-serif;
-    font: 1em;
-    color: #000000;
-    text-align: center
+    background-color: #ffc46b52;
 }
-
-header{
-~~    Usando grid ao invés de flex, pois no flex a posição do nav não fica aonde eu quero de jeito nenhum
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    grid-template-rows: 1fr;
-    grid-template-areas: "logo nav";
-    grid-gap: 0.2rem;
-~~    setup do grid do container
-    grid-area: header;
-    border-radius: var(--main-radius);
-    padding-top: var(--main-padding);
-    justify-content: space-between;
-}
-
-.call{
-~~    setup do grid do container
-    background-color: #bb904f;
-    grid-area: call;
-    border-radius: var(--main-radius);
-    padding-top: 10px;
-    font-style: italic
-}
-
-main{
-~~    setup do grid do container
-    background-color: #a12626;
-    grid-area: main;
-    border-radius: var(--main-radius);
-    padding-top: 8%;
-    text-align: center;
-}
-main a{
-~~    Editando o "Jogar agora" para ficar parecendo um botão
-    color: rgb(255, 255, 255);
-    background-color: #661717;
-    padding: var(--main-padding);
-    border-radius: var(--main-radius);
-    text-decoration: none;
-    border-style: groove;
-}    
-
-aside{
-~~    setup do grid do container
-    background-color: #a12626;
-    grid-area: aside;
-    border-radius: var(--main-radius);
-    padding: 10px;
+::selection{
+    background-color: rgb(180, 0, 0);
     color: white;
 }
-aside p{text-align: justify}
 
-footer{
-~~    setup do grid do container
-    grid-area: footer;
-    border-radius: var(--main-radius);
-    padding-top: var(--main-padding);
+.btn-play{
+    /* Formatando o botão de para ficar com as cores mais proximas do jogo */
+    border-color: rgb(0, 0, 0);
+    background-color: rgb(180, 0, 0);
+    color: #ffffff;
+    font-weight: bold;
 }
 
+/* Colocando uma cor diferente no cabeçalho e rodapé por meio dessa classe */
+.bg-t20{background-color: rgb(180, 70, 0);}
 
-
-.logo{
-~~    setup do grid do header
-    grid-area: logo;
-    border-radius: var(--main-radius);
-    margin: var(--main-padding);
-    padding: var(--main-padding);
+.call{
+    /* Uso uma imagem personalizada como fundo */
+    background-image: url(../images/paper.jpg);
+    background-position: bottom;
+    /* Evita a imagem ficar se repetindo no fundo da div */
+    background-repeat: no-repeat;
+    font-size: large;
+    /* Deixando o texto em itálico por aqui já que a classe de bootstrap não funcionou devidamente no HTML */
+    font-style: italic;
+    /* Ajuste na margin e padding */
+    margin-bottom: 1%;
+    padding-top: 2%;
 }
 
-nav{
-~~    setup do grid do header
-    grid-area: nav;
-    border-radius: var(--main-radius);
-    margin: var(--main-padding);
-    padding-top: var(--main-padding);
-    padding-left: 1rem;
-    padding-right: 1rem;
-}
-nav a{
-~~    Editando os links do nav para ficar parecendo um botão
-    color: rgb(0, 0, 0);
-    padding: var(--main-padding);
-    border-radius: var(--main-radius);
-    border-color: rgb(255, 255, 255);
-    border-style: groove;
-    text-decoration: none;
-}    
-
-.itens{
-~~    Espaçando os elementos do nav
+aside{
+    /* Deixando o botão do mesmo tamanho da imagem com mais facilidade */
     display: flex;
-    list-style: none;
-    justify-content: space-between;
-    padding: 0.5rem;
-} */
+    flex-direction: column;
+}

@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <!-- Meta dados -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,64 +12,125 @@
     <!-- Icone do site -->
     <link rel="icon" type="image/x-icon" href="./images/icon.ico">
     <!-- Link css Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
     <!-- Meu css -->
     <link rel="stylesheet" href="./css/style.css">
     <!-- Nome da guia -->
     <title>Tormenta20</title>
+
 </head>
+
 <body>
-    <div class="container text-center">
-        <!-- Cabeçalho da pagina; Componentes internos foram organizados com grid, o flex não trousse o resultado que eu esperava mesmo depois de testar bastante -->
-        <header class="row">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-t20">
+        <a class="navbar-brand" href="#">
             <!-- Logo do RPG -->
-            <div class="col-4">
-                <figure class="logo"><img src = "./images/logo.png" alt="logoTormenta20" width = "320" heigth = "62"></figure>
-            </div>
+            <img src="images/logo.png" alt="Logotipo" width="150" />
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
             <!-- Navegação baseada no capítulo introdutório do livro -->
-            <nav class="col-8">
-                <ul class="itens">
-                    <li><a href="#">O que é Tormenta20?</a></li>
-                    <li><a href="#">Termos de jogo</a></li>
-                    <li><a href="#">20 Coisas a saber</a></li>
-                </ul>
-            </nav>
-        </header>
-        <!-- Um texto que é usado no livro como "Chamado para aventura" -->
-        <div class="row call">
-            <div class="col">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active"><a class="nav-link" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">O que é Tormenta20?</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Termos de jogo</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">20 Coisas a saber</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="container mt-2">
+        <article class="row">
+            <!-- Um texto que é usado no livro como "Chamado para aventura" -->
+            <div class="col text-center call">
                 <p>Arton. Mundo de problemas, pensam uns. Mundo de desafios, dizem outros. Desafios que convidam a serem vencidos.</p>
                 <p>Os puristas avançam em sua cruzada de ódio. A sinistra nação de Aslothia ergue hordas de mortos-vivos. Os cruéis finntroll caçam escravos para seu império subterrâneo. A Tormenta instala-se no próprio Panteão, ameaçando devorar tudo e todos. </p>
                 <p>As forças militares do Reinado podem pouco contra tais ameaças. Para sobreviver, este mundo precisa de heróis. Aventureiros. Em cada pessoa existe a semente de um campeão épico. Reunidos em uma equipe imbatível, eles cruzam masmorras, reinos, até mundos, rumo à derrota do mal. </p>
                 <p>Esta é a história mais incrível que você vai vivenciar, com os heróis mais fascinantes. Esta será a jornada mais épica. </p>
+                <!-- Tentei usar uma classe de bootstrap aqui pra deixar negrito mas não funcionou -->
                 <p><strong>Porque esta é a SUA aventura.</strong></p>
             </div>
+        </article>
+    </section>
+
+    <!-- Carrossel de Imagens com Caption -->
+    <div id="newsCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicadores -->
+        <ol class="carousel-indicators">
+            <li data-target="#newsCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#newsCarousel" data-slide-to="1"></li>
+            <li data-target="#newsCarousel" data-slide-to="2"></li>
+        </ol>
+
+        <!-- Slides -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="images/img01.png" alt="Novidade 1" class="d-block w-100" />
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Compre dados</h5>
+                    <p>Os melhores d20's do mundo!</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="images/img02.png" alt="Novidade 2" class="d-block w-100" />
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Ameaças de Arton</h5>
+                    <p>Conheça os monstros do cenário!</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="images/img03.png" alt="Novidade 3" class="d-block w-100" />
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Tauron</h5>
+                    <p>Aqueda do deus da força</p>
+                </div>
+            </div>
         </div>
-        <div class="row middle">
+
+        <!-- Controles -->
+        <a class="carousel-control-prev" href="#newsCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Anterior</span>
+        </a>
+        <a class="carousel-control-next" href="#newsCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Próximo</span>
+        </a>
+    </div>
+    <section class="container mt-5">
+        <h2>Introdução</h2>
+        <article class="row">
             <!-- Texto introdutório do livro, devo tirar na responsividade dependendo do tamanho de tela -->
-            <aside class="col ">
-                <h3>INTRODUÇÃO</h3>
+            <main class="col-md-7">
                 <p>Todos já passamos por isso. Um filme, livro ou quadrinho que você teve vontade de mudar. Um personagem que, no momento decisivo, tomou uma atitude diferente da que você tomaria. Um seriado que começou interessante, empolgante, virou febre mundial, mas terminou de um jeito estúpido e decepcionou legiões de fãs. Você queria um final melhor. Você poderia imaginar um final melhor.</p>
                 <p>Podemos expressar nossa revolta nas redes sociais, defender nosso ponto de vista, oferecer nossa versão da história. Em alguns casos, quando um número suficiente de insatisfeitos se manifesta, isso leva os autores/produtores a reconsiderar; consertar quando possível, ou evitar o mesmo caminho no futuro. Também podemos nos apropriar da obra, escrever fanfics. E, em alguns casos, nossa versão pode acabar mais aclamada que a original.</p>
                 <p>Claro, existem os videogames. Em vez de histórias que o público recebe passivamente, games não apenas desafiam nossa habilidade e inteligência, mas também nos permitem fazer as escolhas importantes. Jogos de mundo aberto em que vamos aonde queremos, fazemos o que temos vontade. Diálogos com várias opções, enredos com múltiplos finais. Jogos multijogador online. Nestes tempos em que buscamos viver nossas próprias aventuras, em vez de aceitá-las passivamente, não é surpresa que o mercado de games tenha deixado o cinema para trás.</p>
                 <p>Sim, videogames modernos oferecem controle sobre a história, oferecem a chance de ser o herói. Mas eles apenas tentam recriar um estilo de jogo mais antigo, clássico. Mais antigo que a internet, até mais antigo que os computadores. Antigo, mas ainda presente, ainda vivo. Cada vez mais.</p>
                 <p>RPG. <em>Role-Playing Game</em> — um jogo de interpretação de papéis. Você já conhece RPGs, ou pelo menos ouviu falar. Estão na mídia, estão na cultura pop. Já deixaram de ser aquele “jogo misterioso”, aquele passatempo exótico dos supernerds, como eram décadas atrás. É quase certo que, em algum momento de seu seriado ou desenho animado favorito, alguém joga RPG. Sejam crianças nos anos oitenta, pilotos de robô gigante ou princesas do poder.</p>
-            </aside>
-            <!-- Imagem do livro com link para comprar no site da Jambô editora -->
-            <main class="col ">
-                <figure class="book"><img src = "./images/jamboeditora-tormenta20-560x560.png" alt="livroTormenta20" width = "560vh" heigth = "560vh"></figure>
-                <a href="https://jamboeditora.com.br/produto/tormenta20-edicao-jogo-do-ano/" target="_blank">Jogue Agora!</a>
             </main>
-        </div>
-        <footer class="row">
-            <div class="col">
-                <p>Política de privacidade • Termos de serviço • Acessibilidade e Segurança • Todos os direitos reservados © 2023 Jambô Editora</p>
+            <!-- Imagem do livro com link para comprar no site da Jambô editora -->
+            <aside class="col-md-5">
+                <img src="images/jamboeditora-tormenta20-560x560.png" alt="imagemDesc" class="img-fluid" />
+                <a class="btn btn-play fw-bold btn-lg mt-3" href="https://jamboeditora.com.br/produto/tormenta20-edicao-jogo-do-ano/" role="button" target="_blank">Jogue Agora!</a>
+            </aside>
+        </article>
+    </section>
+    <footer class="bg-t20 text-white pt-5 md-5 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col text-center">
+                    <p>Política de privacidade • Termos de serviço • Acessibilidade e Segurança • Todos os direitos reservados © 2023 Jambô Editora</p>
+                </div>
             </div>
-        </footer>
-    </div>
-
-    <!-- Script para usar o Bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
+        </div>
+    </footer>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
+
 </html>
